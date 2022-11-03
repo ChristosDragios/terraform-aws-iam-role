@@ -4,7 +4,7 @@ name: "Release"
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 # Automatically create a GitHub Release, with release details specified (the relevant commits)
 jobs:
