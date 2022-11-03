@@ -16,7 +16,7 @@ Please define the above variables by:
 
 The above variable is already configured as per AWS documentation to have the minimum AWS managed policy assigned to the role. You can modify if extra permissions are needed.
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/iam-instanceprofile.html 
-
+a
 ## Outputs:
 "assume_policy"
 "policy-permissios"
