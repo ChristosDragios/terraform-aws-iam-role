@@ -12,12 +12,13 @@ jobs:
     name: "Release"
     runs-on: "ubuntu-latest"
     steps:
+
       # ...
       - name: "Build & test"
         run: |
           echo "done!"
 
-      - uses: "ChristosDragios/terraform-aws-iam-role@v"
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: v${{ env.RELEASE_VERSION }}
