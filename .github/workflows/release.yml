@@ -1,28 +1,18 @@
----
+# Name of the workflow
 name: "Release"
-
+# Run on every commit on the "master" branch
 on:
   push:
     branches:
       - "master"
 
+# Automatically create a GitHub Release, with release details specified (the relevant commits)
 jobs:
-  pre-release:
+  release:
     name: "Release"
-    runs-on: "macos-latest"
-
+    runs-on: "ubuntu-latest"
     steps:
-      # ...
-      - name: "Build & test"
-        run: |
-          echo "done!"
-
-      - uses: "ChristosDragios/terraform-aws-iam-role@latest"
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
           prerelease: false
-          title: "Development Build"
-          files: |
-            LICENSE.txt
-            *.tf
