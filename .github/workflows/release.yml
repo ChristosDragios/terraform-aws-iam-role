@@ -12,7 +12,6 @@ jobs:
     name: "Release"
     runs-on: "ubuntu-latest"
     steps:
-    steps:
       # ...
       - name: "Build & test"
         run: |
