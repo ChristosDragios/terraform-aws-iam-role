@@ -22,3 +22,7 @@ https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/iam-instanceprofile.html
 "managed_policy_arns"
 
 You can check the above outputs with the following command: terraform output 
+
+## GitActions
+A basic automation pipeline has been configured to automatically update the release tag on evey git push with a tag. 
+EG: git tag v0.1.1 + git push origin v0.1.1
